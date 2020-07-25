@@ -1,0 +1,46 @@
+﻿<Window x:Class="BooksApp.CadastroLivro"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BooksApp"
+        mc:Ignorable="d"
+        Title="CadastroLivro" Height="450" Width="800">
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0">
+            <Label Content="Cadastro de Livros"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1">
+            <Label Content="Titulo:"/>
+            <TextBox x:Name="TituloTextBox"></TextBox>
+        </StackPanel>
+        <StackPanel Grid.Row="2">
+            <Label Content="Ano:"/>
+            <TextBox x:Name="AnoTextBox"></TextBox>
+        </StackPanel>
+        <StackPanel  Grid.Row="3">
+            <Label Content="Autor:"/>
+            <ComboBox x:Name="AutorComboBox"></ComboBox>
+        </StackPanel>
+        <StackPanel  Grid.Row="4">
+            <Label Content="Genero:"/>
+            <StackPanel Orientation="Horizontal">
+                <ComboBox Width="680" x:Name="GeneroComboBox"></ComboBox>
+                <Button Margin="20, 0" Width="50" Content="+" Click="Button_Click_1"/>
+            </StackPanel>
+            <DataGrid x:Name="GeneroDataGrid" AutoGenerateColumns="True" />
+        </StackPanel>
+        <StackPanel  Grid.Row="5">
+            <Button Content="Salvar" Width="50" Click="Button_Click" />
+        </StackPanel>
+
+    </Grid>
+</Window>
